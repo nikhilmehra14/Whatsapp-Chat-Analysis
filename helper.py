@@ -4,33 +4,36 @@ from wordcloud import WordCloud
 import pandas as pd
 from collections import Counter
 import emoji
-def fetch_stats(selected_user, df):
 
+
+def fetch_stats(selected_user, df):
     if selected_user != 'Overall':
         df = df[df['user'] == selected_user]
-    #fetch number of messages
+    # fetch number of messages
     num_messages = df.shape[0]
-    #fetch number of words
+    # fetch number of words
     words = []
     for message in df['message']:
         words.extend(message.split())
 
-    #fetch total number of media messages
+    # fetch total number of media messages
     num_media_messages = df[df['message'] == '<Media omitted>\n'].shape[0]
 
-    #fetch number of links shared
+    # fetch number of links shared
     links = []
     for message in df['message']:
         links.extend(extract.find_urls(message))
     return num_messages, len(words), num_media_messages, len(links)
 
+
 def most_busy_users(df):
     x = df['user'].value_counts().head()
-    df = round((df['user'].value_counts()/df.shape[0])*100, 2).reset_index().rename(columns={'index': 'Name', 'user': 'Percent'})
+    df = round((df['user'].value_counts() / df.shape[0]) * 100, 2).reset_index().rename(
+        columns={'index': 'Name', 'user': 'Percent'})
     return x, df
 
-def create_wordcloud(selected_user, df):
 
+def create_wordcloud(selected_user, df):
     f = open('stopWordsHinglish.txt', 'r')
     stop_words = f.read()
 
@@ -42,6 +45,8 @@ def create_wordcloud(selected_user, df):
 
     temp = df[df['user'] != 'group_notification']
     temp = temp[temp['message'] != '<Media omitted>\n']
+    temp = temp[temp['message'] != '<media omitted>\n']
+    temp = temp[temp['message'] != '<Media Omitted>\n']
 
     def remove_stop_words(message):
         y = []
@@ -57,7 +62,6 @@ def create_wordcloud(selected_user, df):
 
 
 def most_common_words(selected_user, df):
-
     f = open('stopWordsHinglish.txt', 'r')
     stop_words = f.read()
 
@@ -68,6 +72,8 @@ def most_common_words(selected_user, df):
     # remove stops words
 
     temp = df[df['user'] != 'group_notification']
+    temp = temp[temp['message'] != '<Media omitted>\n']
+    temp = temp[temp['message'] != '<media omitted>\n']
     temp = temp[temp['message'] != '<Media Omitted>\n']
 
     words = []
@@ -77,7 +83,6 @@ def most_common_words(selected_user, df):
                 words.append(word)
     most_common_df = pd.DataFrame(Counter(words).most_common(20))
     return most_common_df
-
 
 
 def emoji_helper(selected_user, df):
@@ -90,7 +95,6 @@ def emoji_helper(selected_user, df):
     emoji_df = pd.DataFrame(Counter(emojis).most_common(len(Counter(emojis))))
 
     return emoji_df
-
 
 
 def monthly_timeline(selected_user, df):
@@ -114,6 +118,7 @@ def daily_timeline(selected_user, df):
     daily_timeline = df.groupby('only_date').count()['message'].reset_index()
     return daily_timeline
 
+
 def week_activity_map(selected_user, df):
     if selected_user != 'Overall':
         df = df[df['user'] == selected_user]
@@ -124,6 +129,7 @@ def month_activity_map(selected_user, df):
     if selected_user != 'Overall':
         df = df[df['user'] == selected_user]
     return df['month'].value_counts()
+
 
 def activity_heat_map(selected_user, df):
     if selected_user != 'Overall':
