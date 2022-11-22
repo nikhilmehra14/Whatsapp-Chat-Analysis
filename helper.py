@@ -41,7 +41,7 @@ def create_wordcloud(selected_user, df):
     # remove stops words
 
     temp = df[df['user'] != 'group_notification']
-    temp = temp[temp['message'] != '<Media Omitted>\n']
+    temp = temp[temp['message'] != '<Media omitted>\n']
 
     def remove_stop_words(message):
         y = []
