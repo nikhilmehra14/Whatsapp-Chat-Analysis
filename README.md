@@ -1,7 +1,9 @@
 # Whatsapp-Chat-Analysis
-This application does WhatsApp chat analysis of 12 Hour format exported chat by
+This application does analysis of whatsapp chat which is in the format of 12 hour time by
 plotting graphs about most used words, emojis,active users etc. It is made in python
 The framework used is streamlit.
+
+Some of the screenshots of the deployed application is shown below: 
 
 ![Screenshot (82)](https://github.com/hackwithnick/Whatsapp-Chat-Analysis/assets/85126935/89c07c14-3f14-40da-bd6d-8c7fa28434a8)
 ![Screenshot (83)](https://github.com/hackwithnick/Whatsapp-Chat-Analysis/assets/85126935/ece13329-99c7-461c-99ca-aac0702314b5)
