@@ -1,9 +1,7 @@
 # Whatsapp-Chat-Analysis
-![Screenshot (81)](https://github.com/hackwithnick/Whatsapp-Chat-Analysis/assets/85126935/7ad2e993-3a98-43f8-a116-ca0f3daac50b)
 ![Screenshot (82)](https://github.com/hackwithnick/Whatsapp-Chat-Analysis/assets/85126935/89c07c14-3f14-40da-bd6d-8c7fa28434a8)
 ![Screenshot (83)](https://github.com/hackwithnick/Whatsapp-Chat-Analysis/assets/85126935/ece13329-99c7-461c-99ca-aac0702314b5)
 ![Screenshot (84)](https://github.com/hackwithnick/Whatsapp-Chat-Analysis/assets/85126935/63fcc936-8c52-4fa6-b0a8-4498246fbc4f)
-![Screenshot (85)](https://github.com/hackwithnick/Whatsapp-Chat-Analysis/assets/85126935/3f1b6fe8-6fa9-4e91-b52b-a04bfb8d2835)
 ![Screenshot (86)](https://github.com/hackwithnick/Whatsapp-Chat-Analysis/assets/85126935/ce0ad211-5666-4670-8c3e-df6429af5fae)
 ![Screenshot (86)](https://github.com/hackwithnick/Whatsapp-Chat-Analysis/assets/85126935/e0f32e35-f705-46d1-aa32-e31106357fd5)
 ![Screenshot (88)](https://github.com/hackwithnick/Whatsapp-Chat-Analysis/assets/85126935/964c0b5b-a119-465a-ba92-6d8c74ef0f99)
