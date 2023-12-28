@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 st.sidebar.title('WhatsApp Chat Analyzer')
 
-uploaded_file = st.sidebar.file_uploader("Choose a file")
+uploaded_file = st.sidebar.file_uploader("Choose a file in .txt format")
 if uploaded_file is not None:
     bytes_data = uploaded_file.getvalue()
     #convert byte stream into string
