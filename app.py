@@ -2,7 +2,7 @@ import streamlit as st
 import preprocessor, helper
 import matplotlib.pyplot as plt
 import seaborn as sns
-st.sidebar.title('WhatsApp Chat Analyzer')
+st.sidebar.title('Analyze your WhatsApp Chat')
 
 uploaded_file = st.sidebar.file_uploader("Choose a file in .txt format")
 if uploaded_file is not None:
